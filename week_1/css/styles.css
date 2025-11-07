@@ -1,0 +1,42 @@
+body {
+  background-image: url("../images/backgroundimage_travel.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.box {
+  background-color: black; /* opaque black container */
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 300px;
+}
+
+input[type="text"] {
+  width: 70%;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+}
+
+button {
+  padding: 8px 12px;
+  margin-left: 6px;
+  border: none;
+  border-radius: 4px;
+  color: black;
+}
+
+ol {
+  text-align: left;
+  margin-top: 15px;
+  padding-left: 20px;
+}
