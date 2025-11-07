@@ -1,0 +1,21 @@
+{
+  "singerHeaders": ["Singers", "DOB", "Best Songs"],
+  "singers": [
+    ["Michael Jackson", "August 29, 1958", "Billie Jean"],
+    ["Beyoncé", "September 4, 1981", "Single Ladies (Put a Ring on It)"],
+    ["Elvis Presley", "January 8, 1935", "Can't Help Falling in Love"],
+    ["Taylor Swift", "December 13, 1989", "Shake It Off"],
+    ["Freddie Mercury", "September 5, 1946", "Bohemian Rhapsody"],
+    ["Adele", "May 5, 1988", "Hello"],
+    ["Whitney Houston", "August 9, 1963", "I Will Always Love You"],
+    ["Ed Sheeran", "February 17, 1991", "Shape of You"],
+    ["Lady Gaga", "March 28, 1986", "Bad Romance"],
+    ["Bruno Mars", "October 8, 1985", "Uptown Funk"],
+    ["Rihanna", "February 20, 1988", "Umbrella"],
+    ["Madonna", "August 16, 1958", "Like a Prayer"],
+    ["Elton John", "March 25, 1947", "Rocket Man"],
+    ["Billie Eilish", "December 18, 2001", "Bad Guy"],
+    ["Prince", "June 7, 1958", "Purple Rain"],
+    ["David Bowie", "January 8, 1947", "Space Oddity"]
+  ]
+}

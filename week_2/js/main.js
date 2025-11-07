@@ -4,18 +4,33 @@ const divElement = document.querySelector(".col-md-8");
 const table = document.createElement("table");
 table.className = "table table-striped";
 
-//create the header of the table
-createTableHeader();
+//load json payload
+fetch("data/tableEntries.json")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("issue occurred");
+    }
+    return response.json();
+  })
+  .then((data) => {
+    //retrieve the values from the json payload
+    const singerTableHeader = data.singerHeaders;
+    const singerTableValues = data.singers;
 
-//create the body of the table
-createTableBody();
+    //create the header of the table
+    createTableHeader(singerTableHeader);
 
-//insert into the div - class col-md-8
-divElement.appendChild(table);
+    //create the body of the table
+    createTableBody(singerTableValues);
 
-function createTableHeader() {
-  const singerTableHeader = ["Singers", "DOB", "Best Songs"];
+    //insert into the div - class col-md-8 (only after table populated)
+    divElement.appendChild(table);
+  })
+  .catch((error) =>
+    console.error("error loading the json payload from filesystem", error)
+  );
 
+function createTableHeader(singerTableHeader) {
   //create the header elements
   const thead = document.createElement("thead");
   const headerRow = document.createElement("tr");
@@ -32,23 +47,13 @@ function createTableHeader() {
   table.appendChild(thead);
 }
 
-function createTableBody() {
-  const singerTableValues = [
-    ["Prince", "June 7, 1958", "Purple Rain"],
-    ["Michael Jackson", "August 29, 1958", "Billie Jean"],
-    ["Elvis Presley", "January 8, 1935", "Can't Help Falling in Love"],
-    ["Taylor Swift", "December 13, 1989", "Shake It Off"],
-    ["Freddie Mercury", "September 5, 1946", "Bohemian Rhapsody"],
-    ["Madonna", "August 16, 1958", "Like a Prayer"],
-    ["Elton John", "March 25, 1947", "Rocket Man"],
-  ];
-
+function createTableBody(singerTableValues) {
   //create the body elements
   const tBody = document.createElement("tbody");
 
-  singerTableValues.forEach((bodyValue) => {
+  singerTableValues.forEach((bodyRowValue) => {
     const valueRow = document.createElement("tr");
-    bodyValue.forEach((cell) => {
+    bodyRowValue.forEach((cell) => {
       const valueCell = document.createElement("td");
       valueCell.textContent = cell;
       valueRow.appendChild(valueCell);
