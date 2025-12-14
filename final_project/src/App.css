@@ -1,0 +1,12 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0.5rem;
+  text-align: top-center;
+}
+
+.equal-img {
+  height: 200px !important; /* overrides img-fluid's height:auto */
+  width: 100%;
+  object-fit: cover;
+}
